@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from 'react';
+import Mycomponent from './Mycomponent';
+import { useState } from "react";
+import {Button,TextField} from '@mui/material';
+import Weather from './Weather'
+import {BrowserRouter ,Routes,Route} from "react-router-dom";
+import Pagecomp from './Pagecomp';
+import Home from './Home';
+import axios from "axios";
+import Result from './Result';
+import Quiz from './Quiz';
 function App() {
-  return (
+  const [name,setName]=React.useState("xyz");
+  const [questions,setQuestions]=useState();
+  const [score,setScore]=React.useState(0);
+  
+   return(
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <BrowserRouter>
+        <Routes>
+          
+          <Route  element={<Home name={name} setName={setName} />} path="/home"/>
+          <Route  element={<Quiz name={name}  score={score} setScore={setScore} setQuestions={setQuestions}/>}  path="/quiz"/>
+          <Route  element={<Result score={score} name={name}/>} path="/result"/>
+          
+        </Routes>
+      </BrowserRouter>
     </div>
-  );
+   )
 }
-
 export default App;
