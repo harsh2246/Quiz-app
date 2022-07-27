@@ -17,7 +17,7 @@ const Result=({score,name})=>{
                         </div>
                         
                         <div style={{color:'Red',padding:20,fontWeight:'bold',fontSize:42,letterSpacing:1}}>
-                            {console.log(name)} Your Score is {location.state.score}
+                            {location.state.name} ,Yours Score is {location.state.score}
                         </div>
                         
                         

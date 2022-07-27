@@ -11,7 +11,7 @@ function Timer(props)
     React.useEffect(() => {
         if(counter==0)
         {navigate('/result');}
-        counter > 0 && setTimeout(() => setCounter(counter - 1), 100);
+        counter > 0 && setTimeout(() => setCounter(counter - 1), 10000);
       }, [counter]);
     /*React.useEffect(()=>{
         setInterval(() =>{
