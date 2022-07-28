@@ -2,7 +2,7 @@ import React from 'react';
 import Timer from './Timer';
 import {Button,TextField,FormControlLabel,Radio,RadioGroup} from '@mui/material';
 import {useLocation} from 'react-router-dom';
-//{props.value}{props.myname.state}{props.color}
+
 const Result=({score,name})=>{
     var location=useLocation()
     return (

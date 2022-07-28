@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import Home from './Home';
 import reportWebVitals from './reportWebVitals';
-import Pagecomp from './Pagecomp';
+
 import Timer from './Timer';
 ReactDOM.render(
   <React.StrictMode>

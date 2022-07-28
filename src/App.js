@@ -1,10 +1,10 @@
 import React from 'react';
-import Mycomponent from './Mycomponent';
+
 import { useState } from "react";
 import {Button,TextField} from '@mui/material';
 import Weather from './Weather'
 import {BrowserRouter ,Routes,Route} from "react-router-dom";
-import Pagecomp from './Pagecomp';
+
 import Home from './Home';
 import axios from "axios";
 import Result from './Result';
